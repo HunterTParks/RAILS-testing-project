@@ -27,3 +27,8 @@ class ListsController < ApplicationController
       params.require(:list).permit(:name)
     end
   end
+
+  def edit
+    @list = List.find(params[:id])
+    render :edit
+  end
